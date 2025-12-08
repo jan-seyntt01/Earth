@@ -1,0 +1,83 @@
+﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+.navbar {
+    background-color: #0F2233;
+    padding: 10px;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+    color: #f2f2f2;
+    font-family: "Montserrat", sans-serif;
+}
+
+    .navbar-brand:hover {
+        color: #F2F2F2;
+        transition: color 0.3s ease;
+    }
+
+    .navbar-brand:focus {
+        color: #F2F2F2;
+    }
+
+.navbar-toggler {
+    border-color: #F2F2F2;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(242,242,242, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.nav-link {
+    color: #f2f2f2;
+    font-family: "Montserrat", sans-serif;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 15px;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: #4c6473; /* Hover color */
+    border-bottom: 2px solid #f2f2f2;
+    transition: all 0.3 ease;
+}
+
+.nav-link.active,
+.nav-link:active {
+    color: #707F8C !important;
+    font-weight: 700;
+    border-bottom: 2px solid #f2f2f2;
+}
+
+.cart-icon {
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon i {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.cart-icon i:hover {
+    transform: scale(1.2);
+    color: #4c6473;
+}
+
+
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

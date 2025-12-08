@@ -1,0 +1,173 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<main>
+    <div class="container-fluid hero-section py-5 d-flex align-items-center">
+        <div class="container">
+            <div class="text-content">
+                <h1 class="planet-title fw-bold text-white">Planet Earth</h1>
+                <p class="lead mb-4 text-white">Our home. Full of life. Full of wonder.</p>
+                <a href="#" class="btn btn-primary fw-bold px-4 py-2 hero-btn">
+                    Discover more
+                </a>
+            </div>
+        </div>
+        <spline-viewer class="earth-3d" url="https://prod.spline.design/xvSaxpnhKkihFRbE/scene.splinecode"></spline-viewer>
+    </div>
+</main>
+
+<section class="cards">
+
+    <div class="title-h2 d-flex justify-content-center align-items-center">
+        <h2>Understand Our Dynamic Planet</h2>
+    </div>
+
+    <div class="container-fluid cards-wrapper py-5 cards-offset">
+        <div class="d-flex flex-wrap gap-4 justify-content-center">
+
+            <!-- Card 1 -->
+            <div class="reveal-card">
+                <img src="~/images/bio.jpg" alt="biodiversity" class="reveal-img">
+                <div class="reveal-overlay">
+                    <h5 class="title">Biodiversity</h5>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="reveal-card">
+                <img src="~/images/climate.jpg" alt="climate" class="reveal-img">
+                <div class="reveal-overlay">
+                    <h5 class="title">Climate</h5>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="reveal-card">
+                <img src="~/images/oceans.jpg" alt="oceans" class="reveal-img">
+                <div class="reveal-overlay">
+                    <h5 class="title">Oceans</h5>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="reveal-card">
+                <img src="~/images/continents.jpg" alt="oceans" class="reveal-img">
+                <div class="reveal-overlay">
+                    <h5 class="title">Continents</h5>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="facts pt-5">
+    <div class="title-h2 d-flex justify-content-center align-items-center">
+        <h2>Facts About Our Earth</h2>
+    </div>
+</section>
+
+<section class="earth-section py-5">
+    <div class="container">
+        <div class="outer-card p-4">
+            <div class="row align-items-center">
+
+ 
+                <div class="col-md-6 col-lg-5 d-flex justify-content-center">
+                    <div class="image-box">
+                        <img src="~/images/earth.jpg" />
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-7">
+                    <h2 class="text-light mb-3">Earth’s Age</h2>
+
+                    <p class="text-light fs-5">
+                        Earth is approximately <strong>4.54 billion years old</strong>, based on
+                        evidence from radiometric age dating of meteorite material and Earth's oldest rocks.
+                    </p>
+                    <a href="#" class="btn btn-primary fw-bold px-4 py-2 hero-btn">
+                        Learn more
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="earth-section py-5">
+    <div class="container">
+        <div class="outer-card p-4">
+            <div class="row align-items-center">
+
+ 
+                <div class="col-md-6 col-lg-7 order-1 order-md-0">
+                    <h2 class="text-light mb-3">The Third Planet</h2>
+
+                    <p class="text-light fs-5">
+                        Earth is the <strong>third planet from the Sun</strong>, positioned between
+                        Venus and Mars in our solar system.
+                    </p>
+
+                    <p class="text-light">
+                        Its distance from the Sun—about <strong>93 million miles</strong>
+                        (150 million kilometers)—places it in the “habitable zone,”
+                        where temperatures allow liquid water to exist.
+                    </p>
+                    <a href="#" class="btn btn-primary fw-bold px-4 py-2 hero-btn">
+                        Learn more
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-5 d-flex justify-content-center order-0 order-md-1">
+                    <div class="image-box">
+                        <img src="~/images/sun.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="earth-section py-5">
+    <div class="container">
+        <div class="outer-card p-4">
+            <div class="row align-items-center">
+
+                <div class="col-md-6 col-lg-5 d-flex justify-content-center">
+                    <div class="image-box">
+                        <img src="~/images/water.jpg" />
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-7">
+                    <h2 class="text-light mb-3">Earth’s Water</h2>
+
+                    <p class="text-light fs-5">
+                        About <strong>71% of Earth’s surface</strong> is covered by water, mostly in the oceans.
+                    </p>
+
+                    <p class="text-light">
+                        Oceans contain approximately <strong>97% of all Earth’s water</strong>, while the remaining 3% is freshwater in glaciers, ice caps, lakes, rivers, and underground reservoirs.
+                    </p>
+
+                    <a href="#" class="btn btn-primary fw-bold px-4 py-2 hero-btn">
+                        Learn more
+                    </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+

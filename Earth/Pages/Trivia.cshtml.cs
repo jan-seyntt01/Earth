@@ -1,0 +1,12 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
+namespace Earth.Pages
+{
+    public class TriviaModel : PageModel
+    {
+        public void OnGet()
+        {
+        }
+    }
+}
