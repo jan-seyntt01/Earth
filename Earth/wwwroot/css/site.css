@@ -7,9 +7,13 @@
 body {
     margin: 0;
     padding: 0;
+   /* padding-top: 90px ;*/
     background-color: #152B40;
     overflow-x: hidden;
 }
+    body.earthmodel-page {
+        padding-top: 90px;
+    }
 
 /*Hero section*/
 .hero-section {

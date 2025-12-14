@@ -1,0 +1,65 @@
+﻿@page
+@model Earth.Pages.EarthModel.CreateModel
+
+        @{
+        ViewData["BodyClass"] = "earthmodel-page";
+        ViewData["Title"] = "Create";
+        }
+        
+        <h1>Create</h1>
+        
+    <h4>EarthModel</h4>
+    <hr />
+    <div class="row">
+    <div class="col-md-4">
+    <form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EarthModel.Question" class="control-label"></label>
+                <input asp-for="EarthModel.Question" class="form-control" />
+                <span asp-validation-for="EarthModel.Question" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EarthModel.OptionA" class="control-label"></label>
+                <input asp-for="EarthModel.OptionA" class="form-control" />
+                <span asp-validation-for="EarthModel.OptionA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EarthModel.OptionB" class="control-label"></label>
+                <input asp-for="EarthModel.OptionB" class="form-control" />
+                <span asp-validation-for="EarthModel.OptionB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EarthModel.OptionC" class="control-label"></label>
+                <input asp-for="EarthModel.OptionC" class="form-control" />
+                <span asp-validation-for="EarthModel.OptionC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EarthModel.OptionD" class="control-label"></label>
+                <input asp-for="EarthModel.OptionD" class="form-control" />
+                <span asp-validation-for="EarthModel.OptionD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EarthModel.CorrectAnswer" class="control-label"></label>
+                <input asp-for="EarthModel.CorrectAnswer" class="form-control" />
+                <span asp-validation-for="EarthModel.CorrectAnswer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EarthModel.Explaination" class="control-label"></label>
+                <input asp-for="EarthModel.Explaination" class="form-control" />
+                <span asp-validation-for="EarthModel.Explaination" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

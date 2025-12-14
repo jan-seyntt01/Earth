@@ -1,7 +1,12 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Earth.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<EarthContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("EarthContext") ?? throw new InvalidOperationException("Connection string 'EarthContext' not found.")));
 
 var app = builder.Build();
 
