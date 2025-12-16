@@ -74,10 +74,61 @@ button.accept-policy {
   line-height: inherit;
 }
 
-.footer {
+/*.footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
   line-height: 60px;
+}*/
+
+.footer {
+    background-color: #0F2233;
+    padding: 10px 0;
+    width: 100%;
 }
+
+.footer-brand {
+    font-size: 30px;
+    font-weight: bold;
+    color: #f2f2f2;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+}
+
+    .footer-brand:hover,
+    .footer-brand:focus {
+        color: #F2F2F2;
+    }
+
+.footer-link {
+    color: #f2f2f2;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    padding-bottom: 2px;
+}
+
+    .footer-link:hover,
+    .footer-link:focus {
+        color: #4c6473;
+        border-bottom: 2px solid #f2f2f2;
+        transition: all 0.3s ease;
+    }
+
+.social-icon {
+    color: #f2f2f2;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+    .social-icon:hover {
+        color: #4c6473;
+        transform: translateY(-2px);
+    }
+
+.footer-text {
+    color: #f2f2f2;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+}
+

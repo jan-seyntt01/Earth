@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Earth.styles.css" asp-append-version="true" />
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="@ViewData["BodyClass"]">
 
@@ -59,11 +62,11 @@
                     </ul>
 
                     <!-- Cart Icon-->
-                    <div class="cart-icon mt-3 mt-lg-0 ms-lg-3">
+@*                     <div class="cart-icon mt-3 mt-lg-0 ms-lg-3">
                         <a href="cart.html" class="text-decoration-none">
                             <i class="fa-solid fa-cart-shopping text-white fs-4"></i>
                         </a>
-                    </div>
+                    </div> *@
                 </div>
             </div>
         </nav>
@@ -75,6 +78,63 @@
             @RenderBody()
         </main>
     </div>
+
+    <footer class="footer mt-auto">
+        <div class="container">
+            <div class="row align-items-center py-3">
+
+                <!-- Brand -->
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <a asp-page="/Index" class="footer-brand">HelloEarth</a>
+                </div>
+
+                <!-- Footer Links -->
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <ul class="footer-nav list-inline mb-0">
+                        <li class="list-inline-item mx-2">
+                            <a asp-page="/Index" class="footer-link">Home</a>
+                        </li>
+                        <li class="list-inline-item mx-2">
+                            <a asp-page="/About" class="footer-link">About</a>
+                        </li>
+                        <li class="list-inline-item mx-2">
+                            <a asp-page="/Trivia" class="footer-link">Trivia</a>
+                        </li>
+                        <li class="list-inline-item mx-2">
+                            <a asp-page="/Privacy" class="footer-link">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Icons -->
+                <div class="col-md-4 text-center text-md-end">
+                    <a href="#" class="social-icon me-3" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon me-3" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon me-3" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Bottom Text -->
+            <div class="row">
+                <div class="col-12 text-center pt-2">
+                    <span class="footer-text">
+                        © @DateTime.Now.Year HelloEarth. All rights reserved.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
