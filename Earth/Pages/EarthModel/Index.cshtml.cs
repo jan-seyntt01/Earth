@@ -6,8 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Earth.Data;
-using Earth.Models;
-
+using Earth.Models;                   
 namespace Earth.Pages.EarthModel
 {
     public class IndexModel : PageModel
