@@ -1,0 +1,38 @@
+﻿@page "/"
+@model Earth.Pages.LoginModel
+@{
+    Layout = "~/Pages/Shared/_LogLayout1.cshtml"; 
+}
+
+<div class="container-border m-5">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="row mt-4">
+            <div class="col-2">
+                <label asp-for="Users.Username" class="text-white"></label>
+            </div>
+            <div class="col-4">
+                <input type="text" asp-for="Users.Username" class="form-control" />
+                <span class="text-danger" asp-validation-for="Users.Username"></span>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-2">
+                <label asp-for="Users.Password" class="text-white"></label>
+            </div>
+            <div class="col-4">
+                <input type="text" asp-for="Users.Password" class="form-control" />
+                <span class="text-danger" asp-validation-for="Users.Password"></span>
+            </div>
+        </div>
+
+        <div class="row padding: 5px">
+            <div class="col-2" style="padding: 5px;">
+                <div>
+                    <input type="submit" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
