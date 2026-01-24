@@ -5,11 +5,25 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
 </head>
-<body>
-    <div>
-        @RenderBody()
+<body class="@ViewData["BodyClass"]">
+    <section class="wrapper">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        @*         <div id="title">
+            <span>PURE CSS</span>
+            <br>
+            <span>PARALLAX PIXEL BACKGROUND</span>
+        </div> *@
+    </section>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+        @* @RenderBody() *@
     </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

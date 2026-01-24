@@ -1,38 +1,33 @@
 ﻿@page "/"
 @model Earth.Pages.LoginModel
 @{
-    Layout = "~/Pages/Shared/_LogLayout1.cshtml"; 
+    Layout = "~/Pages/Shared/_LogLayout1.cshtml";
 }
 
-<div class="container-border m-5">
-    <form method="post">
-        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
-        <div class="row mt-4">
-            <div class="col-2">
-                <label asp-for="Users.Username" class="text-white"></label>
-            </div>
-            <div class="col-4">
-                <input type="text" asp-for="Users.Username" class="form-control" />
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4" style="width: 420px;">
+        <h3 class="text-center mb-4">Login</h3>
+
+        <form method="post">
+            <div class="text-danger mb-3" asp-validation-summary="ModelOnly"></div>
+
+            <div class="mb-3">
+                <label asp-for="Users.Username" class="form-label"></label>
+                <input asp-for="Users.Username" class="form-control" />
                 <span class="text-danger" asp-validation-for="Users.Username"></span>
             </div>
-        </div>
 
-        <div class="row mt-4">
-            <div class="col-2">
-                <label asp-for="Users.Password" class="text-white"></label>
-            </div>
-            <div class="col-4">
-                <input type="text" asp-for="Users.Password" class="form-control" />
+            <div class="mb-3">
+                <label asp-for="Users.Password" class="form-label"></label>
+                <input type="password" asp-for="Users.Password" class="form-control" />
                 <span class="text-danger" asp-validation-for="Users.Password"></span>
             </div>
-        </div>
 
-        <div class="row padding: 5px">
-            <div class="col-2" style="padding: 5px;">
-                <div>
-                    <input type="submit" class="btn btn-primary" />
-                </div>
+            <div class="d-grid mt-4">
+                <button type="submit" class="btn btn-primary">
+                    Login
+                </button>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
