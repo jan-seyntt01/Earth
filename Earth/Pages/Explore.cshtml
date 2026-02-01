@@ -1,0 +1,120 @@
+﻿@page
+@model Earth.Pages.ExploreModel
+@{
+    ViewData["Title"] = "Explore Earth";
+}
+
+<div class="explore-wrapper">
+    <header class="text-center py-5 mt-5">
+        <h1 class="main-title text-white">Explore Our Planet</h1>
+        <p class="lead text-secondary text-white">Dive deep into the systems that make Earth unique.</p>
+    </header>
+
+    @for (int i = 0; i < Model.ExploreTopics.Count; i++)
+    {
+        var topic = Model.ExploreTopics[i];
+        // logic to alternate the image position: even index = image left, odd index = image right
+        var isEven = i % 2 == 0;
+        var rowClass = isEven ? "" : "flex-md-row-reverse";
+
+        <section class="topic-section mb-1">
+            <div class="container">
+                <div class="row align-items-center @rowClass">
+                    <div class="col-md-4">
+                        <img src="@topic.ImagePath" class="img-fluid rounded shadow" />
+                    </div>
+                    <div class="col-md-8">
+                        <h2 class="topic-title text-white">@topic.Title</h2>
+                        @* This shows the "hook" text *@
+                        <p class="text-info h5">@topic.ShortDescription</p>
+
+                        <div class="key-facts-box mt-3 p-3 rounded">
+                            <small class="text-secondary fw-bold">KEY FACTS</small>
+                            <p class="text-light mb-0">@Html.Raw(topic.KeyFacts.Replace("\n", "<br/>"))</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="full-content-text text-light-50">
+                            @* Replace \n with double breaks to show the paragraphs you added *@
+                            @Html.Raw(topic.FullContent.Replace("\n", "<br/><br/>"))
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @if (i < Model.ExploreTopics.Count - 1)
+        {
+            <div class="container">
+                <hr class="section-divider">
+            </div>
+        }
+    }
+
+    @if (User.Identity?.IsAuthenticated == true)
+    {
+        <section class="py-5 bg-dark border-top border-secondary mt-5">
+            <div class="container text-center">
+                <h3 class="text-light mb-4">Manage Explore Topics</h3>
+                <a asp-page="/AdminExploreTopics/Index" class="btn btn-primary fw-bold px-4 py-2">
+                    Open Dashboard
+                </a>
+            </div>
+        </section>
+    }
+</div>
+
+<style>
+    .explore-wrapper {
+        background-color: transparent;
+        min-height: 100vh;
+        color: #ffffff;
+        padding-bottom: 50px;
+    }
+
+    /* Main Page Header */
+    .main-title {
+        font-size: 50px;
+        font-weight: 800;
+    }
+
+    /* THE SPECIFIC CHANGE: Topic titles at 35px and Bold */
+    .topic-title {
+        font-size: 35px !important;
+        font-weight: bold !important;
+        letter-spacing: -0.5px;
+    }
+
+    .img-container img {    
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .key-facts-box {
+        background-color: rgba(255, 255, 255, 0.05);
+        border-left: 4px solid #0dcaf0;
+        backdrop-filter: blur(10px);
+    }
+
+    /* Full Content Styling */
+    .full-content-area {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.85);
+        text-align: justify;
+    }
+
+    .text-info {
+        color: #4fc3f7 !important;
+    }
+
+    .section-divider {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 5rem 0;
+    }
+</style>

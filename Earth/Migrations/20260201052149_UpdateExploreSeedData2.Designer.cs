@@ -4,6 +4,7 @@ using Earth.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Earth.Migrations
 {
     [DbContext(typeof(EarthContext))]
-    partial class EarthContextModelSnapshot : ModelSnapshot
+    [Migration("20260201052149_UpdateExploreSeedData2")]
+    partial class UpdateExploreSeedData2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -58,11 +61,11 @@ namespace Earth.Migrations
                         new
                         {
                             Id = 1,
-                            ImagePath = "/images/about-hero.jpg",
-                            Introduction = "Founded in 2026, HelloEarth began as a small project to bridge the gap between complex planetary science and everyday curiosity. We believe that understanding Earth is the first step toward protecting it. Our platform provides immersive data, historical context, and real-time insights into the systems that sustain life.",
-                            LastUpdated = new DateTime(2026, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Mission = "To empower global citizens with accessible, science-based knowledge about Earth's changing environments.",
-                            Vision = "A world where environmental literacy is universal, leading to a sustainable and thriving future for all."
+                            ImagePath = "/images/earth.jpg",
+                            Introduction = "HelloEarth is an educational website that helps users explore and understand our planet.",
+                            LastUpdated = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Mission = "To educate and inspire people to learn about Earth's systems, environments, and life.",
+                            Vision = "A future where everyone understands and cares for our planet."
                         });
                 });
 

@@ -1,4 +1,135 @@
 ﻿@page
 @model Earth.Pages.AboutModel
 @{
+    ViewData["Title"] = "Our Story";
 }
+
+<div class="about-container mt-5">
+    <section class="about-hero text-center py-5">
+        <div class="container">
+            <h1 class="main-title text-white mb-4">Our Story</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="intro-paragraph">@Model.AboutInfo.Introduction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="value-card h-100">
+                        <div class="icon-circle mb-3"><i class="bi bi-rocket-takeoff"></i></div>
+                        <h3 class="text-white">Our Mission</h3>
+                        <p class="text-light-50">@Model.AboutInfo.Mission</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="value-card h-100 highlight-card">
+                        <div class="icon-circle mb-3"><i class="bi bi-eye"></i></div>
+                        <h3 class="text-white">Our Vision</h3>
+                        <p class="text-light-50">@Model.AboutInfo.Vision</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="value-card h-100">
+                        <div class="icon-circle mb-3"><i class="bi bi-globe-americas"></i></div>
+                        <h3 class="text-white">Our Impact</h3>
+                        <p class="text-light-50">Connecting over 10,000 students and researchers to Earth data every month.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="image-strip mt-5">
+        <div class="container-fluid p-0">
+            <img src="@Model.AboutInfo.ImagePath" alt="Earth Horizon" class="w-100 hero-strip-img" />
+        </div>
+    </section>
+
+    @if (User.Identity?.IsAuthenticated == true)
+    {
+        <div class="container py-5 text-center">
+            <div class="admin-panel p-3 rounded shadow-sm border border-secondary">
+                <p class="text-secondary small mb-2">Internal Management</p>
+                <a asp-page="/AdminAboutContent/Edit" asp-route-id="1" class="btn btn-sm btn-outline-info">Update Content</a>
+                <p class="text-muted x-small mt-2 mb-0">Last updated: @Model.AboutInfo.LastUpdated.ToString("d")</p>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    /* Hero Section */
+    .about-hero {
+        padding-top: 80px;
+        background: radial-gradient(circle at top, rgba(13, 202, 240, 0.1) 0%, transparent 70%);
+    }
+
+    .main-title {
+        font-size: 50px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .intro-paragraph {
+        font-size: 1.3rem;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 300;
+    }
+
+    /* Grid Section */
+    .value-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 40px 30px;
+        border-radius: 20px;
+        transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+    .highlight-card {
+        border-color: rgba(13, 202, 240, 0.4);
+        background: linear-gradient(145deg, rgba(13, 202, 240, 0.05), transparent);
+    }
+
+    .icon-circle {
+        font-size: 2rem;
+        color: #0dcaf0;
+        display: inline-block;
+    }
+
+    .text-light-50 {
+        color: rgba(255, 255, 255, 0.65);
+        line-height: 1.6;
+    }
+
+    /* Image Strip */
+    .hero-strip-img {
+        height: 400px;
+        object-fit: cover;
+        filter: brightness(0.7);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .admin-panel {
+        background: rgba(0,0,0,0.2);
+        display: inline-block;
+    }
+
+    .x-small {
+        font-size: 0.75rem;
+    }
+</style>

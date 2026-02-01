@@ -18,4 +18,9 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.11" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\AdminAboutContent\" />
+    <Folder Include="Pages\AdminExploreTopics\" />
+  </ItemGroup>
+
 </Project>

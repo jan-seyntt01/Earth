@@ -5,20 +5,19 @@ using Earth.Models;
 
 namespace Earth.Pages
 {
-    public class AboutModel : PageModel
+    public class ExploreModel : PageModel
     {
         private readonly EarthContext _context;
-        public AboutContent AboutInfo { get; set; } = new();
+        public List<ExploreTopic> ExploreTopics { get; set; } = new();
 
-        public AboutModel(EarthContext context)
+        public ExploreModel(EarthContext context)
         {
             _context = context;
         }
 
         public async Task OnGetAsync()
         {
-            AboutInfo = await _context.AboutContents.FirstOrDefaultAsync()
-                ?? new AboutContent();
+            ExploreTopics = await _context.ExploreTopics.ToListAsync();
         }
     }
 }
