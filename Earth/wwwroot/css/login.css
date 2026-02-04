@@ -1,9 +1,9 @@
 ﻿/* Full-page background */
-body {
+/*body {
     min-height: 100vh;
-    background-color: #152B40;
+    background-color: #152B40;*/
     /*background: linear-gradient(135deg, #0d6efd, #0b1d3a);*/
-    display: flex;
+    /*display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,39 +11,39 @@ body {
 }
 
 html, body {
-    margin: 0; /* remove default margin */
-    padding: 0; /* remove default padding */
-    height: 100%; /* ensure full viewport height */
-    overflow: hidden; /* prevent scrollbars */
-}
+    margin: 0;*/ /* remove default margin */
+    /*padding: 0;*/ /* remove default padding */
+    /*height: 100%;*/ /* ensure full viewport height */
+    /*overflow: hidden;*/ /* prevent scrollbars */
+/*}*/
 
 /* Login card */
-.card {
+/*.card {
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.85);
     border-radius: 16px;
     padding: 2rem;
     box-shadow: none;
     color: #ffffff;
-}
+}*/
 
     /* Headline */
-    .card h3 {
+    /*.card h3 {
         font-weight: 600;
         letter-spacing: 0.5px;
-    }
+    }*/
 
     /*Labels*/
-.form-label {
+/*.form-label {
     color: #ffffff;
 }
 
 .text-danger {
     color: #ffb3b3 !important;
-}
+}*/
 
 /* Inputs */
-.form-control {
+/*.form-control {
     background-color: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.6);
     color: #ffffff;
@@ -58,33 +58,33 @@ html, body {
         border-color: #ffffff;
         box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.35);
         color: #ffffff;
-    }
+    }*/
 
 /* Login button */
-.btn-primary {
-    background-color: #0F2233; /* changed from Bootstrap blue */
-    border-color: #0F2233; /* match the border */
-    color: #ffffff; /* text color */
-    height: 45px;
+/*.btn-primary {
+    background-color: #0F2233;*/ /* changed from Bootstrap blue */
+    /*border-color: #0F2233;*/ /* match the border */
+    /*color: #ffffff;*/ /* text color */
+    /*height: 45px;
     border-radius: 12px;
     font-weight: 600;
     transition: all 0.2s ease-in-out;
 }
 
     .btn-primary:hover {
-        background-color: #0F2233; /* keep hover consistent */
-        border-color: #0F2233;
+        background-color: #0F2233;*/ /* keep hover consistent */
+        /*border-color: #0F2233;
         transform: translateY(-1px);
-        box-shadow: 0 6px 15px rgba(15, 34, 51, 0.35); /* subtle shadow in your new color */
-    }
+        box-shadow: 0 6px 15px rgba(15, 34, 51, 0.35);*/ /* subtle shadow in your new color */
+    /*}*/
 
 /* Validation messages */
-.text-danger {
+/*.text-danger {
     font-size: 0.875rem;
-}
+}*/
 
 /* Fade animation */
-@keyframes fadeIn {
+/*@keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(8px);
@@ -94,8 +94,106 @@ html, body {
         opacity: 1;
         transform: translateY(0);
     }
+}*/
+
+
+/* Enhanced Background */
+body {
+    background: radial-gradient(circle at center, #1e3a5f 0%, #152B40 100%);
+    overflow: hidden;
 }
 
+/* Glassmorphism Effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+}
+
+/* Custom Floating Inputs */
+.form-floating > .form-control {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.form-floating > label {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Change label color on focus/fill */
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+    color: #0F2233; /* A bright "cyber" blue to pop against the dark */
+    font-size: 12px;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: #0F2233;
+    box-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
+}
+
+/* Button Styling */
+.btn-login {
+    background-color: #0F2233;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .btn-login:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+        color: #fff;
+    }
+
+.forgot-link {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.2s;
+}
+
+    .forgot-link:hover {
+        color: #00d4ff;
+    }
+
+/* Animation */
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* For Chrome, Edge, and Safari */
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button {
+    background-color: white;
+}
+
+/* This targets the actual 'eye' icon in Edge and Chrome */
+input::-ms-reveal,
+input::-webkit-peek-password-block {
+    filter: invert(100%); 
+}
+
+/* Specifically for Edge's password reveal button */
+input::-ms-reveal {
+    filter: invert(100%);
+}
 
 #stars {
     width: 1px;

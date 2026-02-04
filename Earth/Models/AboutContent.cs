@@ -7,16 +7,16 @@ namespace Earth.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Introduction is required")]
         public string Introduction { get; set; } = string.Empty;
 
-        [Required]
+        [Required(ErrorMessage = "Mission is required")]
         public string Mission { get; set; } = string.Empty;
 
-        [Required]
+        [Required(ErrorMessage = "Vision is required")]
         public string Vision { get; set; } = string.Empty;
 
-        [StringLength(200)]
+        [StringLength(200, MinimumLength = 50)]
         public string ImagePath { get; set; } = string.Empty;
 
         public DateTime LastUpdated { get; set; } = DateTime.Now;
