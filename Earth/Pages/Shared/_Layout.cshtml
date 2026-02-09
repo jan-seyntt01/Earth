@@ -51,7 +51,7 @@
 
                 <!-- Navbar Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    @* <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-page="Index">Home</a>
                         </li>
@@ -66,6 +66,28 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-page="Facts">Facts</a>
+                        </li>
+                    </ul> *@
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["page"]?.ToString() == "/Index" ? "active" : "")"
+                               asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["page"]?.ToString() == "/About" ? "active" : "")"
+                               asp-page="/About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["page"]?.ToString() == "/Explore" ? "active" : "")"
+                               asp-page="/Explore">Explore</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["page"]?.ToString() == "/Trivia" ? "active" : "")"
+                               asp-page="/Trivia">Trivia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["page"]?.ToString() == "/Facts" ? "active" : "")"
+                               asp-page="/Facts">Facts</a>
                         </li>
                     </ul>
                 </div>

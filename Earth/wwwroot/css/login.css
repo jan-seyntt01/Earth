@@ -99,8 +99,10 @@ html, body {
 
 /* Enhanced Background */
 body {
-    background: radial-gradient(circle at center, #1e3a5f 0%, #152B40 100%);
+    /*background: radial-gradient(circle at center, #1e3a5f 0%, #152B40 100%);*/
+    background-color: #152B40;
     overflow: hidden;
+    font-family: "Montserrat", sans-serif;
 }
 
 /* Glassmorphism Effect */

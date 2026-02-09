@@ -2,14 +2,18 @@
 @model Earth.Pages_AdminAboutContent.EditModel
 
 @{
+    ViewData["BodyClass"] = "earthmodel-page";
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1 style="color: white;">Edit</h1>
 
+<div style="color: white;">
 <h4>AboutContent</h4>
+</div>
+
 <hr />
-<div class="row">
+<div class="row" style="color: white;">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -17,33 +21,33 @@
             <div class="form-group">
 <span class="text-danger">*</span>
                 <label asp-for="AboutContent.Introduction" class="control-label"></label>
-                <input asp-for="AboutContent.Introduction" class="form-control" aria-required="true"/>
+                <input asp-for="AboutContent.Introduction" class="form-control mb-3" aria-required="true"/>
                 <span asp-validation-for="AboutContent.Introduction" class="text-danger"></span>
             </div>
             <div class="form-group">
 <span class="text-danger">*</span>
                 <label asp-for="AboutContent.Mission" class="control-label"></label>
-                <input asp-for="AboutContent.Mission" class="form-control" aria-required="true"/>
+                <input asp-for="AboutContent.Mission" class="form-control mb-3" aria-required="true"/>
                 <span asp-validation-for="AboutContent.Mission" class="text-danger"></span>
             </div>
             <div class="form-group">
 <span class="text-danger">*</span>
                 <label asp-for="AboutContent.Vision" class="control-label"></label>
-                <input asp-for="AboutContent.Vision" class="form-control" aria-required="true"/>
+                <input asp-for="AboutContent.Vision" class="form-control mb-3" aria-required="true"/>
                 <span asp-validation-for="AboutContent.Vision" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="AboutContent.ImagePath" class="control-label"></label>
-                <input asp-for="AboutContent.ImagePath" class="form-control" />
+                <input asp-for="AboutContent.ImagePath" class="form-control mb-3" />
                 <span asp-validation-for="AboutContent.ImagePath" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="AboutContent.LastUpdated" class="control-label"></label>
-                <input asp-for="AboutContent.LastUpdated" class="form-control" />
+                <input asp-for="AboutContent.LastUpdated" class="form-control mb-3" />
                 <span asp-validation-for="AboutContent.LastUpdated" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary mb-3" />
             </div>
         </form>
     </div>

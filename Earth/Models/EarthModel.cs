@@ -28,6 +28,6 @@ namespace Earth.Models
 
         [Required(ErrorMessage = "Explanation is required")]
         [StringLength(500)]
-        public string Explaination { get; set; } = string.Empty;
+        public string Explanation { get; set; } = string.Empty;
     }
 }

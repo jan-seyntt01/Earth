@@ -2,12 +2,14 @@
 @model Earth.Pages_AdminExploreTopics.CreateModel
 
         @{
+        ViewData["BodyClass"] = "earthmodel-page";
         ViewData["Title"] = "Create";
         }
-        
-        <h1>Create</h1>
-        
-    <h4>ExploreTopic</h4>
+
+<h1 style="color:white;">Create</h1>
+<div style="color:white;">
+<h4>ExploreTopic</h4>
+</div>
     <hr />
     <div class="row">
     <div class="col-md-4">
@@ -15,36 +17,36 @@
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="ExploreTopic.Title" class="control-label"></label>
+                <label asp-for="ExploreTopic.Title" class="control-label" style="color:white;"></label>
                 <input asp-for="ExploreTopic.Title" class="form-control" aria-required="true"/>
                 <span asp-validation-for="ExploreTopic.Title" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="ExploreTopic.ShortDescription" class="control-label"></label>
+                <label asp-for="ExploreTopic.ShortDescription" class="control-label" style="color:white;"></label>
                 <input asp-for="ExploreTopic.ShortDescription" class="form-control" aria-required="true"/>
                 <span asp-validation-for="ExploreTopic.ShortDescription" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="ExploreTopic.ImagePath" class="control-label"></label>
+                <label asp-for="ExploreTopic.ImagePath" class="control-label" style="color:white;"></label>
                 <input asp-for="ExploreTopic.ImagePath" class="form-control" aria-required="true"/>
                 <span asp-validation-for="ExploreTopic.ImagePath" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="ExploreTopic.FullContent" class="control-label"></label>
+                <label asp-for="ExploreTopic.FullContent" class="control-label" style="color:white;"></label>
                 <input asp-for="ExploreTopic.FullContent" class="form-control" aria-required="true"/>
                 <span asp-validation-for="ExploreTopic.FullContent" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="ExploreTopic.KeyFacts" class="control-label"></label>
+                <label asp-for="ExploreTopic.KeyFacts" class="control-label" style="color:white;"></label>
                 <input asp-for="ExploreTopic.KeyFacts" class="form-control" aria-required="true"/>
                 <span asp-validation-for="ExploreTopic.KeyFacts" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ExploreTopic.CreatedDate" class="control-label"></label>
+                <label asp-for="ExploreTopic.CreatedDate" class="control-label" style="color:white;"></label>
                 <input asp-for="ExploreTopic.CreatedDate" class="form-control" />
                 <span asp-validation-for="ExploreTopic.CreatedDate" class="text-danger"></span>
             </div>

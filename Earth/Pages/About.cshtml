@@ -5,6 +5,7 @@
 }
 
 <div class="about-container mt-5">
+    <div class="full-viewport-section">
     <section class="about-hero text-center py-5">
         <div class="container">
             <h1 class="main-title text-white mb-4">Our Story</h1>
@@ -28,7 +29,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="value-card h-100 highlight-card">
+                    <div class="value-card h-100">
                         <div class="icon-circle mb-3"><i class="bi bi-eye"></i></div>
                         <h3 class="text-white">Our Vision</h3>
                         <p class="text-light-50">@Model.AboutInfo.Vision</p>
@@ -45,12 +46,15 @@
             </div>
         </div>
     </section>
+    </div>
 
     <section class="image-strip mt-5">
         <div class="container-fluid p-0">
             <img src="@Model.AboutInfo.ImagePath" alt="Earth Horizon" class="w-100 hero-strip-img" />
         </div>
     </section>
+
+
 
     @if (User.Identity?.IsAuthenticated == true)
     {
@@ -65,10 +69,17 @@
 </div>
 
 <style>
+    .full-viewport-section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        padding-bottom: 50px;
+    }
+
     /* Hero Section */
     .about-hero {
         padding-top: 80px;
-        background: radial-gradient(circle at top, rgba(13, 202, 240, 0.1) 0%, transparent 70%);
     }
 
     .main-title {

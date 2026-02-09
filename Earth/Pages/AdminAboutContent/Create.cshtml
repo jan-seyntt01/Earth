@@ -2,12 +2,14 @@
 @model Earth.Pages_AdminAboutContent.CreateModel
 
         @{
+        ViewData["BodyClass"] = "earthmodel-page";
         ViewData["Title"] = "Create";
         }
         
-        <h1>Create</h1>
-        
-    <h4>AboutContent</h4>
+        <h1 style="color: white;">Create</h1>
+<div style="color: white;">
+<h4>AboutContent</h4>
+</div>
     <hr />
     <div class="row">
     <div class="col-md-4">
@@ -15,29 +17,29 @@
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="AboutContent.Introduction" class="control-label"></label>
+                <label asp-for="AboutContent.Introduction" class="control-label" style="color: white;"></label>
                 <input asp-for="AboutContent.Introduction" class="form-control" aria-required="true"/>
                 <span asp-validation-for="AboutContent.Introduction" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="AboutContent.Mission" class="control-label"></label>
+                <label asp-for="AboutContent.Mission" class="control-label" style="color: white;"></label>
                 <input asp-for="AboutContent.Mission" class="form-control" aria-required="true"/>
                 <span asp-validation-for="AboutContent.Mission" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="AboutContent.Vision" class="control-label"></label>
+                <label asp-for="AboutContent.Vision" class="control-label" style="color: white;"></label>
                 <input asp-for="AboutContent.Vision" class="form-control" aria-required="true"/>
                 <span asp-validation-for="AboutContent.Vision" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AboutContent.ImagePath" class="control-label"></label>
+                <label asp-for="AboutContent.ImagePath" class="control-label" style="color: white;"></label>
                 <input asp-for="AboutContent.ImagePath" class="form-control" />
                 <span asp-validation-for="AboutContent.ImagePath" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AboutContent.LastUpdated" class="control-label"></label>
+                <label asp-for="AboutContent.LastUpdated" class="control-label" style="color: white;"></label>
                 <input asp-for="AboutContent.LastUpdated" class="form-control" />
                 <span asp-validation-for="AboutContent.LastUpdated" class="text-danger"></span>
             </div>
