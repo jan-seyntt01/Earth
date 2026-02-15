@@ -16,6 +16,21 @@ namespace Earth.Models
         [Required(ErrorMessage = "Vision is required")]
         public string Vision { get; set; } = string.Empty;
 
+        [Required]
+        [StringLength(800)]
+        public string Purpose { get; set; } = string.Empty;
+
+        [StringLength(1000)]
+        public string CoreValues { get; set; } = string.Empty;
+
+        [StringLength(600)]
+        public string TargetAudience { get; set; } = string.Empty;
+
+        [StringLength(300)]
+        public string Impact { get; set; } = string.Empty;
+
+        public int FoundationYear { get; set; }
+
         [StringLength(200, MinimumLength = 50)]
         public string ImagePath { get; set; } = string.Empty;
 

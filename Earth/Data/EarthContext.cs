@@ -28,6 +28,10 @@ namespace Earth.Data
                     Introduction = "Founded in 2026, HelloEarth began as a small project to bridge the gap between complex planetary science and everyday curiosity. We believe that understanding Earth is the first step toward protecting it. Our platform provides immersive data, historical context, and real-time insights into the systems that sustain life.",
                     Mission = "To empower global citizens with accessible, science-based knowledge about Earth's changing environments.",
                     Vision = "A world where environmental literacy is universal, leading to a sustainable and thriving future for all.",
+                    Purpose = "HelloEarth was created to transform complex Earth system science into structured, accessible knowledge for students and lifelong learners. By organizing environmental information into interconnected themes such as biodiversity, climate, oceans, and continents, the platform encourages holistic understanding of the planet rather than fragmented facts.",
+                    CoreValues = "We are guided by scientific integrity, accessibility, and environmental responsibility. We prioritize evidence-based information, inclusive educational design, and the belief that knowledge should empower individuals to make informed environmental decisions.",
+                    TargetAudience = "HelloEarth is designed for students, educators, researchers, and environmentally conscious individuals who seek structured and reliable knowledge about Earth's systems. The platform supports both academic learning and independent exploration.",
+                    Impact = "HelloEarth connects thousands of learners each month to structured Earth science content, supporting academic research, classroom education, and environmental awareness initiatives worldwide.",
                     ImagePath = "/images/about-hero.jpg",
                     LastUpdated = new DateTime(2026, 2, 1)
                 }
